@@ -234,6 +234,9 @@ RUN cd /root/opencv/build && \
 # Bugfix for camera driver included in OpenCV
 RUN echo 'ln /dev/null /dev/raw1394' >> ~/.bashrc
 
+# Install python3 packages
+RUN pip3 install joblib ujson glob2
+
 # Set up notebook config
 COPY jupyter_notebook_config.py /root/.jupyter/
 
